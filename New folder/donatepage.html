@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donation form</title>
+    <link rel="stylesheet" href="donatepage.css">
+
+<script>
+    function validateForm() {
+    var name = document.getElementById("name").value;
+    var email = document.getElementById("email").value;
+    var phone = document.getElementById("phone").value;
+    var address = document.getElementById("address").value;
+    var purpose = document.getElementById("purpose").value;
+    var paymentMethod = document.querySelector('input[name="payment-method"]:checked');
+    
+    // Check that all required fields are filled out
+    if (name == "" || email == "" || phone == "" || address == "" || purpose == "" || paymentMethod == null) {
+        alert("Please fill out all required fields.");
+        return false;
+    }
+    
+    // Check that phone number is in a valid format
+    var phoneRegex = /^\d{10}$/;
+    if (!phoneRegex.test(phone)) {
+        alert("Please enter a valid 10-digit phone number.");
+        return false;
+    }
+    
+    // All validation checks passed, allow form to submit
+    alert("Thank you for your donation!");
+    return true;
+}
+
+</script>
+    
+</head>
+<body>
+    <div class="background">
+
+        <form action="thankyou.html" onsubmit="return validateForm()" id="donation-form">
+
+		<h2 class="heading">Donation Form</h2>
+		<label for="name">Name:</label>
+		<input type="text" id="name" name="name" placeholder="Enter your name" required>
+        	<label for="email">Email:</label>
+	<input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+	<label for="phone">Phone:</label>
+	<input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+
+	<label for="address">Address:</label>
+	<textarea id="address" name="address" placeholder="Enter your address" required></textarea>
+
+	<label for="purpose">Donation Purpose:</label>
+	<select id="purpose" name="purpose" required>
+		<option value="">Select a purpose</option>
+		<option value="Animal care">Animal care</option>
+		<option value="Habitat protection">Habitat protection</option>
+		
+	</select>
+
+	
+
+	<label for="payment-method">Payment Method:</label><br><br>
+	<input type="radio" id="Gpay" name="payment-method" value="Gpay">
+	<label for="Gpay">Gpay</label><br>
+	<input type="radio" id="paytm" name="payment-method" value="Paytm">
+	<label for="paytm">Paytm</label><br>
+    <input type="radio" id="phone pe" name="payment-method" value="Phone pe">
+	<label for="phone pe">Phone pe</label><br><br>
+
+
+	<label for="message">Message:</label>
+	<textarea id="message" name="message" placeholder="Enter a message"></textarea>
+
+   <input type="submit" value="Submit"> 
+</form>
+</div>
+</body>
+</html>

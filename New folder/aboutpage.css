@@ -1,0 +1,46 @@
+.about-background {
+    background-image: url("https://media.springernature.com/full/springer-cms/rest/v1/img/23611344/v1/height/320");
+    background-size:cover;
+    height:100vh;
+    }
+    
+    .about-heading {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+    padding:30px;
+    font-family:cursive;
+    color:#066b32;
+    }
+    
+    .about-paragraph {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    text-align: center;
+    font-family:cursive;
+    font-size:20px;
+    color:#9c1809;
+    font-weight: bold;
+    padding:10px;
+    }
+    
+    .about-paragraph5
+    {
+        font-size: 20px;
+        text-align: center;
+        background-color: aliceblue;
+        height:100px;
+        width:300px;
+        padding: 10px;
+        margin-left: 150px;
+        margin-top: 50px;
+        border-radius: 20px;
+        font-family: cursive;
+        color:#09389c;
+    }
+    
+    
+    
+    

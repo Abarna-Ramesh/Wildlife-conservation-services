@@ -1,0 +1,50 @@
+.home-background
+{
+    background-image: url("https://i.pinimg.com/736x/ab/bc/1d/abbc1d5062585092c10bc928f099fa8e.jpg");
+    height:100vh;
+    background-size: cover;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+}
+
+nav a {
+    display: block;
+    padding: 1em;
+    text-decoration: none;
+}
+
+.home-heading
+{
+    text-align: center;
+    color:brown;
+    padding-top:250px;
+    font-size:45px;
+    font-family: cursive;
+    
+}
+
+.home-paragraph
+{
+    text-align: center;
+    color:#216b70;
+    padding-left:250px;
+    font-size: 35px;
+    font-family:cursive;
+}
+
+.nav-background
+{
+    background-color: aliceblue;
+    
+    border-radius: 25px;
+    
+    
+}
